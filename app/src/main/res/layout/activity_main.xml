@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnDecimal"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_mono_italic"
+                android:text="@string/decimal"
+                android:textAllCaps="false"
+                android:textColor="@color/numberSystemColor"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnBinary"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_mono_italic"
+                android:text="@string/binary"
+                android:textAllCaps="false"
+                android:textColor="@color/numberSystemColor"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnOctal"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_mono_italic"
+                android:text="@string/octal"
+                android:textAllCaps="false"
+                android:textColor="@color/numberSystemColor"
+                android:textSize="@dimen/_25ssp" />
+
+
+            <Button
+                android:id="@+id/btnHexaDecimal"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_mono_italic"
+                android:text="@string/hexa_decimal"
+                android:textColor="@color/numberSystemColor"
+                android:textAllCaps="false"
+                android:textSize="@dimen/_25ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnD"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/d"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnE"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/e"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnF"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/f"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+
+            <Button
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/left_arrow"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/_25ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnA"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/a"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnB"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/b"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnC"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/c"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+
+            <Button
+                android:id="@+id/btnClearAll"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/ac"
+                android:textColor="@android:color/holo_red_light"
+                android:textSize="@dimen/_25ssp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSeven"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_7"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnEight"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_8"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnNine"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_9"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+
+            <Button
+                android:id="@+id/btnDivision"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/division"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:rippleColor="@color/rippleColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFour"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnFive"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnSix"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_6"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+
+            <Button
+                android:id="@+id/btnMultiplication"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/multiplication"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:rippleColor="@color/rippleColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOne"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnThree"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/minus"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:rippleColor="@color/rippleColor" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnZero"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/_0"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnPoint"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/point"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnEqual"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/equal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp" />
+
+            <Button
+                android:id="@+id/btnPlush"
+                style="@style/Widget.MaterialComponents.Button.TextButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/cascadia_code"
+                android:text="@string/plush"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_25ssp"
+                app:rippleColor="@color/rippleColor" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
