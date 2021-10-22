@@ -15,56 +15,213 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:baselineAligned="false"
             android:orientation="horizontal">
 
-            <Button
-                android:id="@+id/btnDecimal"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/cascadia_mono_italic"
-                android:text="@string/decimal"
-                android:textAllCaps="false"
-                android:textColor="@color/numberSystemColor"
-                android:textSize="@dimen/_25ssp" />
+                android:layout_weight="1">
 
-            <Button
-                android:id="@+id/btnBinary"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+                <Button
+                    android:id="@+id/btnDecimal"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/cascadia_mono_italic"
+                    android:text="@string/decimal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/numberSystemColor"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiDecimalUp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnDecimal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/up" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiDecimalDown"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnDecimal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/down" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/cascadia_mono_italic"
-                android:text="@string/binary"
-                android:textAllCaps="false"
-                android:textColor="@color/numberSystemColor"
-                android:textSize="@dimen/_25ssp" />
+                android:layout_weight="1">
 
-            <Button
-                android:id="@+id/btnOctal"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+                <Button
+                    android:id="@+id/btnBinary"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cascadia_mono_italic"
+                    android:text="@string/binary"
+                    android:textAllCaps="false"
+                    android:textColor="@color/numberSystemColor"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiBinaryUp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBinary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/up" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiBinaryDown"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnBinary"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/down" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/cascadia_mono_italic"
-                android:text="@string/octal"
-                android:textAllCaps="false"
-                android:textColor="@color/numberSystemColor"
-                android:textSize="@dimen/_25ssp" />
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnOctal"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cascadia_mono_italic"
+                    android:text="@string/octal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/numberSystemColor"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiOctalUp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnOctal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/up" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiOctalDown"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnOctal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/down" />
 
 
-            <Button
-                android:id="@+id/btnHexaDecimal"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:fontFamily="@font/cascadia_mono_italic"
-                android:text="@string/hexa_decimal"
-                android:textColor="@color/numberSystemColor"
-                android:textAllCaps="false"
-                android:textSize="@dimen/_25ssp" />
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/btnHexaDecimal"
+                    style="@style/Widget.MaterialComponents.Button.TextButton"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/cascadia_mono_italic"
+                    android:text="@string/hexa_decimal"
+                    android:textAllCaps="false"
+                    android:textColor="@color/numberSystemColor"
+                    android:textSize="@dimen/_25ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiHexaDecimalUp"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHexaDecimal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/up" />
+
+                <com.airbnb.lottie.LottieAnimationView
+                    android:id="@+id/lottiHexaDecimalDown"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_26sdp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/btnHexaDecimal"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:lottie_autoPlay="true"
+                    app:lottie_loop="true"
+                    app:lottie_rawRes="@raw/down" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
         </LinearLayout>
 
@@ -358,14 +515,15 @@
 
             <Button
                 android:id="@+id/btnEqual"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
+                style="?android:attr/buttonBarButtonStyle"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:fontFamily="@font/cascadia_code"
                 android:text="@string/equal"
                 android:textColor="@color/black"
-                android:textSize="@dimen/_25ssp" />
+                android:textSize="@dimen/_25ssp"
+                app:backgroundTint="#FFFF00" />
 
             <Button
                 android:id="@+id/btnPlush"
